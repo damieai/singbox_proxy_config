@@ -415,6 +415,13 @@
       {
         "action": "route",
         "rule_set": [
+          "my-direct-rules"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "GeoIP-Private"
         ],
         "outbound": "🎯 全球直连"
@@ -583,6 +590,13 @@
         "download_detour": "🚀 节点选择"
       },
       {
+        "tag": "my-direct-rules",
+        "type": "remote",
+        "url": "https://testingcf.jsdelivr.net/gh/damieai/my-singbox-rules@main/dist/direct.srs",
+        "format": "binary",
+        "download_detour": "🚀 节点选择"
+      },
+      {
         "tag": "GeoLocation-!CN",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
@@ -642,6 +656,13 @@
         "action": "route",
         "rule_set": [
           "GeoSite-CN"
+        ],
+        "server": "Local-DNS"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "my-direct-rules"
         ],
         "server": "Local-DNS"
       },
